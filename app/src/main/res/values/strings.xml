@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Digital House Foods</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="log_in">Log In</string>
+    <string name="or">Or</string>
+    <string name="register">Register</string>
+    <string name="name">Name</string>
+    <string name="repeat_password">Repeat Password</string>
+    <string name="msg_invalid_email">Invalid email address</string>
+    <string name="field_required">%1$s is required</string>
+    <string name="close_time_message">Fecha às %1$s</string>
+    <string name="restaurant_image_description">Restaurant Image</string>
+    <string name="dish_image_description">Dish Image</string>
+    <string name="password_doesnt_match">Password doesn\'t match</string>
+</resources>

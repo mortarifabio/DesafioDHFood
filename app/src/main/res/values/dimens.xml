@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_quarter">6dp</dimen>
+    <dimen name="margin_half">12dp</dimen>
+    <dimen name="margin_default">24dp</dimen>
+    <dimen name="margin_double">48dp</dimen>
+    <dimen name="back_button_size">48dp</dimen>
+    <dimen name="home_restaurant_item_img_height">190dp</dimen>
+    <dimen name="home_restaurant_item_name_size">28sp</dimen>
+    <dimen name="home_restaurant_item_time_size">12sp</dimen>
+    <dimen name="restaurant_img_height">300dp</dimen>
+    <dimen name="restaurant_name_size">30sp</dimen>
+    <dimen name="restaurant_dish_list_item_name_size">26sp</dimen>
+    <dimen name="restaurant_dish_item_img_height">100dp</dimen>
+    <dimen name="restaurant_dish_item_name_size">18sp</dimen>
+    <dimen name="dish_img_height">300dp</dimen>
+    <dimen name="dish_name_size">30sp</dimen>
+    <dimen name="dish_description_size">16sp</dimen>
+</resources>

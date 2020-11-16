@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activity.DishActivity">
+
+    <ImageView
+        android:id="@+id/ivDishImage"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dish_img_height"
+        android:contentDescription="@string/dish_image_description"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btDishBack"
+        style="@style/ButtonBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/ivDishImage"
+        app:layout_constraintTop_toTopOf="@id/ivDishImage" />
+
+    <TextView
+        android:id="@+id/tvDishName"
+        style="@style/DishName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/ivDishImage"
+        app:layout_constraintEnd_toEndOf="@id/ivDishImage"
+        app:layout_constraintStart_toStartOf="@id/ivDishImage" />
+
+    <TextView
+        android:id="@+id/tvDishDescription"
+        style="@style/DishDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivDishImage" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

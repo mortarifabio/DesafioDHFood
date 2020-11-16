@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activity.RestaurantActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivRestaurantImage"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/restaurant_img_height"
+            android:contentDescription="@string/restaurant_image_description"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btRestaurantBack"
+            style="@style/ButtonBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/ivRestaurantImage"
+            app:layout_constraintTop_toTopOf="@id/ivRestaurantImage" />
+
+        <TextView
+            android:id="@+id/tvRestaurantName"
+            style="@style/RestaurantName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/ivRestaurantImage"
+            app:layout_constraintEnd_toEndOf="@id/ivRestaurantImage"
+            app:layout_constraintStart_toStartOf="@id/ivRestaurantImage" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvRestaurantDishListList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_quarter"
+            android:layout_marginEnd="@dimen/margin_quarter"
+            android:clipToPadding="false"
+            android:nestedScrollingEnabled="false"
+            android:paddingTop="@dimen/margin_half"
+            android:paddingBottom="@dimen/margin_quarter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivRestaurantImage"
+            tools:itemCount="5"
+            tools:listitem="@layout/restaurant_dish_list_item" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

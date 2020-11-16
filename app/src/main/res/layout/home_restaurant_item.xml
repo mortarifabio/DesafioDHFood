@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cvHomeRestaurant"
+    style="@style/CardRestaurant"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivHomeRestaurantImage"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/home_restaurant_item_img_height"
+            android:contentDescription="@string/restaurant_image_description"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/tvHomeRestaurantName"
+            style="@style/CardRestaurantName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tvHomeRestaurantAddress"
+            style="@style/CardRestaurantAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tvHomeRestaurantTime"
+            style="@style/CardRestaurantTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

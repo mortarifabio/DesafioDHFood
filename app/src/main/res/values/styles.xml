@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="EditTextDefault">
+        <item name="android:paddingEnd">0dp</item>
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:textColor">@color/main_blue</item>
+    </style>
+
+    <style name="EditTextDefaultTheme">
+        <item name="colorControlActivated">@color/medium_gray</item>
+    </style>
+
+    <style name="ButtonDefault">
+        <item name="android:background">@drawable/button_default</item>
+        <item name="android:layout_marginBottom">@dimen/margin_half</item>
+        <item name="android:layout_marginEnd">@dimen/margin_default</item>
+        <item name="android:layout_marginStart">@dimen/margin_default</item>
+        <item name="android:layout_marginTop">@dimen/margin_half</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="ButtonGray" parent="ButtonDefault">
+        <item name="android:background">@drawable/button_gray</item>
+    </style>
+
+    <style name="ButtonBack" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:minHeight">@dimen/back_button_size</item>
+        <item name="android:minWidth">@dimen/back_button_size</item>
+        <item name="android:paddingLeft">@dimen/margin_half</item>
+        <item name="android:paddingRight">@dimen/margin_half</item>
+        <item name="icon">@drawable/ic_back</item>
+        <item name="iconTint">@color/white</item>
+        <item name="iconPadding">0dp</item>
+        <item name="strokeWidth">0dp</item>
+    </style>
+
+    <style name="CardRestaurantName">
+        <item name="android:layout_marginEnd">@dimen/margin_half</item>
+        <item name="android:layout_marginStart">@dimen/margin_half</item>
+        <item name="android:layout_marginTop">@dimen/margin_quarter</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/home_restaurant_item_name_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="CardRestaurantAddress">
+        <item name="android:layout_marginEnd">@dimen/margin_half</item>
+        <item name="android:layout_marginStart">@dimen/margin_half</item>
+        <item name="android:textColor">@color/main_gray</item>
+    </style>
+
+    <style name="CardRestaurantTime">
+        <item name="android:layout_marginBottom">@dimen/margin_half</item>
+        <item name="android:layout_marginEnd">@dimen/margin_half</item>
+        <item name="android:layout_marginStart">@dimen/margin_half</item>
+        <item name="android:textColor">@color/main_gray</item>
+        <item name="android:textSize">@dimen/home_restaurant_item_time_size</item>
+    </style>
+
+    <style name="RestaurantName">
+        <item name="android:layout_marginBottom">@dimen/margin_quarter</item>
+        <item name="android:layout_marginEnd">@dimen/margin_half</item>
+        <item name="android:layout_marginStart">@dimen/margin_half</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/restaurant_name_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="RestaurantDishListName">
+        <item name="android:layout_marginBottom">@dimen/margin_quarter</item>
+        <item name="android:layout_marginEnd">@dimen/margin_quarter</item>
+        <item name="android:layout_marginStart">@dimen/margin_quarter</item>
+        <item name="android:layout_marginTop">@dimen/margin_half</item>
+        <item name="android:textColor">@color/dark_gray</item>
+        <item name="android:textSize">@dimen/restaurant_dish_list_item_name_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="CardRestaurantDishName">
+        <item name="android:layout_marginBottom">@dimen/margin_half</item>
+        <item name="android:layout_marginEnd">@dimen/margin_half</item>
+        <item name="android:layout_marginStart">@dimen/margin_half</item>
+        <item name="android:layout_marginTop">@dimen/margin_quarter</item>
+        <item name="android:textColor">@color/dark_gray</item>
+        <item name="android:textSize">@dimen/restaurant_dish_item_name_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="DishName">
+        <item name="android:layout_marginBottom">@dimen/margin_quarter</item>
+        <item name="android:layout_marginEnd">@dimen/margin_half</item>
+        <item name="android:layout_marginStart">@dimen/margin_half</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/dish_name_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="DishDescription">
+        <item name="android:layout_marginEnd">@dimen/margin_half</item>
+        <item name="android:layout_marginStart">@dimen/margin_half</item>
+        <item name="android:layout_marginTop">@dimen/margin_half</item>
+        <item name="android:textColor">@color/main_gray</item>
+        <item name="android:textSize">@dimen/dish_description_size</item>
+    </style>
+
+</resources>
