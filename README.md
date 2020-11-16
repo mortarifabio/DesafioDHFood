@@ -1,4 +1,4 @@
-# DesafioDHFood
+# Desafio DHFood
 Desafio "Digital House Foods" do curso Santander Coders Mobile / Android da Digital House
 
 ### Padrão de Design
