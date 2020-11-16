@@ -11,7 +11,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.mortarifabio.dhfoods.R
 import com.mortarifabio.dhfoods.model.DishList
 import com.mortarifabio.dhfoods.view.activity.DishActivity
-import kotlinx.android.synthetic.main.restaurant_dish_list_item.view.*
 
 class DishListAdapter(
     private val dishListList: List<DishList>
@@ -41,7 +40,7 @@ class DishListAdapter(
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val recyclerView: RecyclerView = itemView.rvRestaurantDishList
+        val recyclerView: RecyclerView = itemView.findViewById(R.id.rvRestaurantDishList)
         fun bind(dishList: DishList) = with(itemView) {
             findViewById<TextView>(R.id.tvRestaurantDishListName).text = dishList.name
         }
