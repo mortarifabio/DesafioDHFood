@@ -6,20 +6,22 @@ import android.os.Bundle
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.mortarifabio.dhfoods.R
+import com.mortarifabio.dhfoods.databinding.ActivityHomeBinding
 import com.mortarifabio.dhfoods.view.adapter.HomeAdapter
 import com.mortarifabio.dhfoods.viewModel.HomeViewModel
 
 class HomeActivity : AppCompatActivity() {
 
+    private lateinit var binding: ActivityHomeBinding
     private lateinit var viewModel: HomeViewModel
     private val recyclerView: RecyclerView by lazy {
-        findViewById(R.id.rvHomeRestaurantList)
+        binding.rvHomeRestaurantList
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_home)
+        binding = ActivityHomeBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         viewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
         viewModel.getRestaurants()
         setupObservables()

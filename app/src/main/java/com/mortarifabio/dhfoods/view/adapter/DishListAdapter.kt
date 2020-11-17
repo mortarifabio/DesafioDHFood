@@ -4,11 +4,11 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.mortarifabio.dhfoods.R
+import com.mortarifabio.dhfoods.databinding.RestaurantDishListItemBinding
 import com.mortarifabio.dhfoods.model.DishList
 import com.mortarifabio.dhfoods.view.activity.DishActivity
 
@@ -40,9 +40,10 @@ class DishListAdapter(
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val binding = RestaurantDishListItemBinding.bind(itemView)
         val recyclerView: RecyclerView = itemView.findViewById(R.id.rvRestaurantDishList)
         fun bind(dishList: DishList) = with(itemView) {
-            findViewById<TextView>(R.id.tvRestaurantDishListName).text = dishList.name
+            binding.tvRestaurantDishListName.text = dishList.name
         }
     }
 

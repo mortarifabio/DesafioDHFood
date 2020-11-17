@@ -3,23 +3,24 @@ package com.mortarifabio.dhfoods.view.activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import com.google.android.material.textfield.TextInputLayout
 import com.mortarifabio.dhfoods.R
+import com.mortarifabio.dhfoods.databinding.ActivityLoginBinding
 import com.mortarifabio.dhfoods.utils.Utils
 
 class LoginActivity : AppCompatActivity() {
 
+    private lateinit var binding: ActivityLoginBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
+        binding = ActivityLoginBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         initComponents()
     }
 
     private fun initComponents() {
-        val loginButton = findViewById<Button>(R.id.btLoginLogin)
-        val registerButton = findViewById<Button>(R.id.btLoginRegister)
+        val loginButton = binding.btLoginLogin
+        val registerButton = binding.btLoginRegister
 
         loginButton.setOnClickListener {
             if (canLogin()) {
@@ -35,10 +36,10 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun canLogin(): Boolean {
-        val etEmail = findViewById<EditText>(R.id.etLoginEmail)
-        val tilEmail = findViewById<TextInputLayout>(R.id.tilLoginEmail)
-        val etPassword = findViewById<EditText>(R.id.etLoginPassword)
-        val tilPassword = findViewById<TextInputLayout>(R.id.tilLoginPassword)
+        val etEmail = binding.etLoginEmail
+        val tilEmail = binding.tilLoginEmail
+        val etPassword = binding.etLoginPassword
+        val tilPassword = binding.tilLoginPassword
 
         Utils(this).apply {
             return isEmailValid(etEmail, tilEmail)

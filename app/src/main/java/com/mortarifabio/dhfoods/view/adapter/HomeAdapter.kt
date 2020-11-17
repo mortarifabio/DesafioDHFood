@@ -3,11 +3,10 @@ package com.mortarifabio.dhfoods.view.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.mortarifabio.dhfoods.R
+import com.mortarifabio.dhfoods.databinding.HomeRestaurantItemBinding
 import com.mortarifabio.dhfoods.model.Restaurant
 
 class HomeAdapter(
@@ -30,12 +29,13 @@ class HomeAdapter(
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val binding = HomeRestaurantItemBinding.bind(itemView)
         fun bind(restaurant: Restaurant, onItemClicked: (Int) -> Unit) = with(itemView) {
-            Glide.with(context).load(restaurant.img).into(findViewById(R.id.ivHomeRestaurantImage))
-            findViewById<TextView>(R.id.tvHomeRestaurantName).text = restaurant.name
-            findViewById<TextView>(R.id.tvHomeRestaurantAddress).text = restaurant.address
-            findViewById<TextView>(R.id.tvHomeRestaurantTime).text = context.getString(R.string.close_time_message, restaurant.time)
-            findViewById<CardView>(R.id.cvHomeRestaurant).setOnClickListener {
+            Glide.with(context).load(restaurant.img).into(binding.ivHomeRestaurantImage)
+            binding.tvHomeRestaurantName.text = restaurant.name
+            binding.tvHomeRestaurantAddress.text = restaurant.address
+            binding.tvHomeRestaurantTime.text = context.getString(R.string.close_time_message, restaurant.time)
+            binding.cvHomeRestaurant.setOnClickListener {
                 onItemClicked(this@ViewHolder.adapterPosition)
             }
         }

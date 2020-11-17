@@ -3,11 +3,10 @@ package com.mortarifabio.dhfoods.view.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.mortarifabio.dhfoods.R
+import com.mortarifabio.dhfoods.databinding.RestaurantDishItemBinding
 import com.mortarifabio.dhfoods.model.Dish
 
 class DishAdapter(
@@ -30,10 +29,11 @@ class DishAdapter(
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val binding = RestaurantDishItemBinding.bind(itemView)
         fun bind(dish: Dish, onItemClicked: (Int) -> Unit) = with(itemView) {
-            Glide.with(context).load(dish.img).into(findViewById(R.id.ivRestaurantDishImage))
-            findViewById<TextView>(R.id.tvRestaurantDishName).text = dish.name
-            findViewById<CardView>(R.id.cvRestaurantDish)?.setOnClickListener {
+            Glide.with(context).load(dish.img).into(binding.ivRestaurantDishImage)
+            binding.tvRestaurantDishName.text = dish.name
+            binding.cvRestaurantDish.setOnClickListener {
                 onItemClicked(this@ViewHolder.adapterPosition)
             }
         }
